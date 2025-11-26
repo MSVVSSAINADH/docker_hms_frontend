@@ -10,7 +10,7 @@ const StaffManagement = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showDeleted, setShowDeleted] = useState(false); // toggle for deleted staff
-  const API_URL = 'http://localhost:8086/api/staff';
+  const API_URL = 'http://localhost:5101/api/staff';
 
   // Load staff from backend based on showDeleted flag
   useEffect(() => {

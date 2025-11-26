@@ -24,7 +24,7 @@ const UserListTable = ({ users, onDeleteUser }) => {
               <td>
                 <div className={styles.userPhoto}>
                   {user.profilePhoto ? (
-                    <img src={`http://localhost:8086/upload/${user.profilePhoto}`} alt={user.username} />
+                    <img src={`http://localhost:5101/upload/${user.profilePhoto}`} alt={user.username} />
                   ) : (
                     <div className={styles.placeholder}>👤</div>
                   )}

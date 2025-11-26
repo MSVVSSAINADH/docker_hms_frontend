@@ -28,7 +28,7 @@ const BookAppointment = () => {
   useEffect(() => {
     if (formData.date) {
       axios
-        .get(`http://localhost:8086/api/doctor-schedule/available?date=${formData.date}`)
+        .get(`http://localhost:5101/api/doctor-schedule/available?date=${formData.date}`)
         .then((res) => {
           setAvailableDoctors(res.data);
         })
@@ -48,7 +48,7 @@ const BookAppointment = () => {
     }
 
     try {
-      await axios.post('http://localhost:8086/api/appointments/book', formData);
+      await axios.post('http://localhost:5101/api/appointments/book', formData);
       alert('Appointment booked successfully!');
       setFormData({ patientName: '', doctorName: '', date: '', time: '', reason: '' });
     } catch (error) {

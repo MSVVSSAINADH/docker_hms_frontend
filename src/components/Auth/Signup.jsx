@@ -46,7 +46,7 @@ function Signup() {
     }
 
     try {
-      const res = await fetch("http://localhost:8086/api/users/register", {
+      const res = await fetch("http://localhost:5101/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

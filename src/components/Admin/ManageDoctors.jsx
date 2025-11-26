@@ -9,7 +9,7 @@ const ManageDoctors = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showDeleted, setShowDeleted] = useState(false);
-  const API_URL = 'http://localhost:8086/api/doctors';
+  const API_URL = 'http://localhost:5101/api/doctors';
 
   // Fetch doctors
   useEffect(() => {

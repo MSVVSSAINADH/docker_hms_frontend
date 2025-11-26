@@ -16,7 +16,7 @@ const AddDoctor = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/doctors", doctor);
+      await axios.post("http://localhost:5101/api/doctors", doctor);
       alert("Doctor added successfully!");
       setDoctor({ name: "", specialization: "", email: "", phone: "" });
     } catch (error) {

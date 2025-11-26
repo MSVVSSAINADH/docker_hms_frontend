@@ -42,7 +42,7 @@ const ScheduleConsultation = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8086/api/doctor-schedule/save',
+        'http://localhost:5101/api/doctor-schedule/save',
         scheduleData
       );
       console.log('Schedule saved:', response.data);

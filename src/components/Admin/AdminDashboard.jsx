@@ -14,7 +14,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8086/api/users/all');
+        const response = await axios.get('http://localhost:5101/api/users/all');
         setUsers(response.data);
         setError(null);
       } catch (err) {
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
   const handleDeleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await axios.delete(`http://localhost:8086/api/users/${userId}`);
+        await axios.delete(`http://localhost:5101/api/users/${userId}`);
         setUsers(users.filter((user) => user.id !== userId));
       } catch (err) {
         console.error('Error deleting user:', err);
