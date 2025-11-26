@@ -1,0 +1,40 @@
+/* src/App.css */
+
+/* Basic reset */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+.app-container {
+  position: relative; /* Crucial for containing potential absolutely/fixed positioned children */
+  min-height: 100vh; /* Ensures it takes full height */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  /* Remove background-color if set here, as Background component handles it */
+  /* background-color: white; */ 
+}
+
+/* Ensure header, main, and footer are above the particles background */
+.app-container > * {
+  position: relative; /* Give all direct children a relative position */
+  z-index: 1; /* And a z-index > -1 */
+  /* This ensures Header, main, and Footer are visible */
+}
+
+.app-main-content {
+  flex-grow: 1; /* Makes the main content area take up available space */
+  padding: 20px; /* Example padding for content */
+  /* background-color: transparent; */ /* Or a specific color if needed for readability */
+}
+
+/* You might want to remove any background-color from specific page components 
+   if you want the particles background to show through. */
+/* Example for a page: */
+/* .homePage {
+  background-color: transparent; 
+} */

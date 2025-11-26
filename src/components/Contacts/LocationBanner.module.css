@@ -1,0 +1,81 @@
+/* Section Container */
+.locationSection {
+  background-color: #fcfefe;
+  width: 100%;
+  padding: 40px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #1f2b6c;
+  font-family: 'Yeseva One', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #6c757d;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Map Container */
+.mapContainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 956px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.mapContainer:hover {
+  transform: scale(1.01);
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay for interaction */
+.mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 43, 108, 0.7); /* Dark semi-transparent overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mapContainer:hover .mapOverlay {
+  opacity: 1;
+}
+
+.mapIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlayText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

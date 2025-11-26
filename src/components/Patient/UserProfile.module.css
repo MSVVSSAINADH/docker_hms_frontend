@@ -1,0 +1,209 @@
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* Profile Card */
+.profileCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Profile Picture */
+.profilePic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #007bff;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profilePic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+}
+
+/* User Name */
+.userName {
+  font-family: 'Yeseva One', serif;
+  font-size: 2rem;
+  color: #1f2b6c;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Profile Details */
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.detailIcon {
+  font-size: 1.5rem;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.detailText {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #495057;
+  transition: color 0.3s ease;
+}
+
+/* Editable Input Fields */
+.editInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #495057;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.editInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  transform: scale(1.02);
+}
+
+/* Edit Button */
+.editBtn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.editBtn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Save and Cancel Buttons */
+.editButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.saveBtn,
+.cancelBtn {
+  flex: 1;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.saveBtn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.cancelBtn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.cancelBtn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Smooth Transition for Edit Mode */
+.profileCard,
+.profileHeader,
+.profileDetails,
+.editInput,
+.editButtons {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .profileCard {
+    padding: 1.5rem;
+  }
+
+  .userName {
+    font-size: 1.5rem;
+  }
+
+  .detailText,
+  .editInput {
+    font-size: 1rem;
+  }
+
+  .editBtn,
+  .saveBtn,
+  .cancelBtn {
+    font-size: 0.95rem;
+    padding: 0.8rem 0;
+  }
+}
