@@ -116,7 +116,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <div className={styles.logo}><Link to="/">KLU Hospital</Link></div>
+        <div className={styles.logo}><Link to="/">KL Hospital</Link></div>
         <button className={styles.hamburger} onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
